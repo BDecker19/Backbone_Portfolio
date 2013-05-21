@@ -27,4 +27,14 @@ $(document).ready(function() {
   // Create a view for the first Project and render it
   // var view = new app.views.ProjectView({ model: projectList.first() });
   // $('#project-list').append(view.render().el);
+
+  var me = new app.models.User({
+    firstName: "someone",
+    lastName: "lastname",
+    imageUrl: "uploads/someone.jpg",
+    bio: "someone's bio",
+    mission: "someone's mission"
+  });
+
+  new app.views.UserView({ model: me }).render();
 });
