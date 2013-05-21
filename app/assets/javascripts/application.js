@@ -29,11 +29,11 @@ $(document).ready(function() {
   // $('#project-list').append(view.render().el);
 
   var me = new app.models.User({
-    firstName: "someone",
+    firstName: "firstname",
     lastName: "lastname",
     imageUrl: "uploads/someone.jpg",
-    bio: "someone's bio",
-    mission: "someone's mission"
+    bio: "some's bio is here",
+    mission: "someone's mission is to have someone's mission"
   });
 
   new app.views.UserView({ model: me }).render();
