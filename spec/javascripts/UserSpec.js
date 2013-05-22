@@ -5,7 +5,6 @@ describe("A User", function() {
 		user = new app.models.User({
 			firstName: 'Oren',
 			lastName: 'Bnv',
-			// imageUrl: 'uploads/me.jpg',
 			bio: "my bio is my bio",
 			mission: "my mission is my mission is my mission"
 		});
@@ -59,6 +58,44 @@ describe("A User", function() {
 
 	});
 
+	describe("should save to the local storage through a collection of users", function(){
+		// beforeEach(function() {
+		// 	// clear the localStorage
+		// 	localStorage.clear();
+
+		// 	user1 = new app.models.User({
+		// 		firstName: 'Oren1',
+		// 		lastName: 'Bnv1',
+		// 		imageUrl: "uploads/someone.jpg",
+		// 		bio: "my bio1 is my bio1",
+		// 		mission: "my mission1 is my mission1 is my mission1"
+		// 	});
+
+		// 	user2 = new app.models.User({
+		// 		firstName: 'Oren2',
+		// 		lastName: 'Bnv2',
+		// 		imageUrl: "uploads/someone.jpg",
+		// 		bio: "my bio2 is my bio2",
+		// 		mission: "my mission2 is my mission2 is my mission2"
+		// 	});
+
+		// 	var userList = new app.collections.UserList();
+		// 	userList.create(user1);
+		// 	userList.create(user2);
+		// });
+
+		// it("should persist in the database and be fetched correctly", function() {
+		// 	var newUserList = new app.collections.UserList();
+		// 	consloe.log("blahhhhhhh");
+		// 	consloe.log(newUserList.fetch());
+		// 	expect(newUserList.fetch()).toEqual(2);
+		// });
+		
+		// it("afda", function(){
+
+		// });
+
+	});
 
 
 });
