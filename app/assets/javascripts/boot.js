@@ -4,5 +4,6 @@
 var app = app || {
   models: {},
   views: {},
-  collections: {}
+  collections: {},
+  routers: {}
 };
