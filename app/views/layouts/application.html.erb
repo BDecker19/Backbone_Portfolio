@@ -3,12 +3,23 @@
 <head>
   <title>BackbonePortfolio</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<section id="header">
+</section>
+
+<section id="content">
+	<!-- backbone will output to this section -->
+</section>
+
+<section id="footer">
+</section>
+
+<!-- moved here to load all the js after the page loads -->
+<%= javascript_include_tag "application" %>
 
 </body>
 </html>
