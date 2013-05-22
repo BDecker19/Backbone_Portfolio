@@ -186,3 +186,27 @@ ul.skill-list li {
 .clear {
   clear: both;
 }
+
+.user-card {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(183, 200, 218);
+  margin: 5px;
+  text-align: center;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 6px;
+  box-shadow: 1px 2px 6px #999999;
+  border: 1px solid rgb(93, 99, 105);
+  font-weight: bold;
+}
+
+.user-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid rgb(93, 99, 105);
+}
+
+
+

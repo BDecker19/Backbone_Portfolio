@@ -7,6 +7,7 @@
 //= require router
 //= require_tree ./models
 //= require_tree ./collections
+//= require dummy_data
 //= require_tree ./templates
 //= require_tree ./views
 //= require init

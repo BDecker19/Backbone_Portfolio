@@ -1,5 +1,7 @@
 app.models.User = Backbone.Model.extend({
 
+	// localStorage: new Backbone.LocalStorage('portfolio-users'),
+
 	initialize: function() {
 		if (!this.isValid()) {
 			alert(this.validationError);
