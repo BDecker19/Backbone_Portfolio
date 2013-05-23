@@ -1,7 +1,5 @@
 app.models.User = Backbone.Model.extend({
 
-	// localStorage: new Backbone.LocalStorage('portfolio-users'),
-
 	initialize: function() {
 		if (!this.isValid()) {
 			alert(this.validationError);
@@ -9,19 +7,19 @@ app.models.User = Backbone.Model.extend({
 	},
 
 	fullName: function() {
-		return this.attributes.firstName + " " + this.attributes.lastName;
+		return this.attributes.first_name + " " + this.attributes.last_name;
 	},
 
 	defaults: {
-		imageUrl : 'uploads/someone.jpg'
+		image_url : 'uploads/someone.jpg'
 	},
 
 	validate: function(attr){
 		var errors = new Array;
-		if (typeof attr.firstName == undefined || attr.firstName == null || attr.firstName == "") {
+		if (typeof attr.first_name == undefined || attr.first_name == null || attr.first_name == "") {
 			errors += "first name is not valid, ";
 		};
-		if (typeof attr.lastName == undefined || attr.lastName == null || attr.lastName == "") {
+		if (typeof attr.last_name == undefined || attr.last_name == null || attr.last_name == "") {
 			errors += "last name is not valid, ";
 		};
 		if (typeof attr.bio == undefined || attr.bio == null || attr.bio.length < 10) {

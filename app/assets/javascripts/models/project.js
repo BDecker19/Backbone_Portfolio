@@ -1,7 +1,5 @@
 app.models.Project = Backbone.Model.extend({
 
-	localStorage: new Backbone.LocalStorage('portfolio'),
-
 	// this tells it to listen for changes 
 	// and then call the function
 	initialize: function() {

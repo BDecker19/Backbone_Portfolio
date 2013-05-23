@@ -35,9 +35,9 @@ $(document).ready(function() {
   createDummyUsers = function() {
 
     var someone1 = new app.models.User({
-      firstName: "first1",
-      lastName: "last1",
-      imageUrl: "uploads/someone.jpg",
+      first_name: "first1",
+      last_name: "last1",
+      image_url: "uploads/someone.jpg",
       bio: "someone's 1 bio is here",
       mission: "someone's 1 mission is to have someone's mission here"
     });
@@ -47,9 +47,9 @@ $(document).ready(function() {
     // console.log(someone1);
 
     var someone2 = new app.models.User({
-      firstName: "first2",
-      lastName: "last2",
-      imageUrl: "uploads/someone.jpg",
+      first_name: "first2",
+      last_name: "last2",
+      image_url: "uploads/someone.jpg",
       bio: "someone's 2 bio is here",
       mission: "someone's 2 mission is to have someone's mission here"
     });

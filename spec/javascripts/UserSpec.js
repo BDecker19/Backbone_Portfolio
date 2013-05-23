@@ -3,8 +3,8 @@ describe("A User", function() {
 
 	beforeEach(function() {
 		user = new app.models.User({
-			firstName: 'Oren',
-			lastName: 'Bnv',
+			first_name: 'Oren',
+			last_name: 'Bnv',
 			bio: "my bio is my bio",
 			mission: "my mission is my mission is my mission"
 		});
@@ -15,26 +15,26 @@ describe("A User", function() {
 	});
 
 	it("should have a default picture if no picture uploaded", function(){
-		expect(user.attributes.imageUrl).toEqual('uploads/someone.jpg');
+		expect(user.attributes.image_url).toEqual('uploads/someone.jpg');
 	});
 
 	describe("Validation", function(){
 		
 		it("should have a valid first name", function(){
-			user.set({ firstName : "" });
+			user.set({ first_name : "" });
 			expect(user.isValid()).toBeFalsy();
-			user.set({ firstName : null });
+			user.set({ first_name : null });
 			expect(user.isValid()).toBeFalsy();
-			user.set({ firstName : undefined });
+			user.set({ first_name : undefined });
 			expect(user.isValid()).toBeFalsy();
 		});
 
 		it("should have a valid last name", function(){
-			user.set({ lastName : "" });
+			user.set({ last_name : "" });
 			expect(user.isValid()).toBeFalsy();
-			user.set({ lastName : null });
+			user.set({ last_name : null });
 			expect(user.isValid()).toBeFalsy();
-			user.set({ lastName : undefined });
+			user.set({ last_name : undefined });
 			expect(user.isValid()).toBeFalsy();
 		});
 
@@ -64,17 +64,17 @@ describe("A User", function() {
 		// 	localStorage.clear();
 
 		// 	user1 = new app.models.User({
-		// 		firstName: 'Oren1',
-		// 		lastName: 'Bnv1',
-		// 		imageUrl: "uploads/someone.jpg",
+		// 		first_name: 'Oren1',
+		// 		last_name: 'Bnv1',
+		// 		image_url: "uploads/someone.jpg",
 		// 		bio: "my bio1 is my bio1",
 		// 		mission: "my mission1 is my mission1 is my mission1"
 		// 	});
 
 		// 	user2 = new app.models.User({
-		// 		firstName: 'Oren2',
-		// 		lastName: 'Bnv2',
-		// 		imageUrl: "uploads/someone.jpg",
+		// 		first_name: 'Oren2',
+		// 		last_name: 'Bnv2',
+		// 		image_url: "uploads/someone.jpg",
 		// 		bio: "my bio2 is my bio2",
 		// 		mission: "my mission2 is my mission2 is my mission2"
 		// 	});
