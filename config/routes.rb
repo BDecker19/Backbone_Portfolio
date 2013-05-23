@@ -1,6 +1,6 @@
 BackbonePortfolio::Application.routes.draw do
  
-  resources :users
+  resources :users, :only => [:index, :show]
   
   root :to => 'home#index'
 

@@ -27,6 +27,8 @@ group :test do
 end
 
 group :development, :test do
+	gem 'pry'
+	gem 'pry-debugger'
   gem 'jasmine'
   gem 'rspec-rails', '~> 2.0'
   gem 'machinist', '>= 2.0.0.beta2'

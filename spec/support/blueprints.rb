@@ -9,9 +9,9 @@ require 'machinist/active_record'
 #   end
 
 User.blueprint do
-	first_name {"firstName ##{i}"}
-	last_name {"lastName ##{i}"}
-  bio {"this is the bio of user ##{i}"}
-  mission {"this is the mission of user ##{i}"}
+	first_name {Faker::Name.first_name}
+	last_name {Faker::Name.last_name}
+  bio {Faker::Lorem.words(100).join(" ")}
+  mission {Faker::Lorem.words(20).join(" ")}
   image_url {"uploads/someone.jpg"}
 end
