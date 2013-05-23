@@ -3,6 +3,11 @@ app.views.UserCardView = Backbone.View.extend({
 	tagName: 'div',
 	template: JST['templates/_user_card'],
 	className: 'user-card',
+
+	initialize: function() {
+		this.$el.attr('data-id', this.model.id);
+	},
+
 	render: function() {
 		//get the template html
 		var html = this.template({

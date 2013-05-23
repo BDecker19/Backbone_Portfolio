@@ -1,6 +1,10 @@
 app.views.HomeView = Backbone.View.extend({
 
 	template: JST['templates/home'],
+
+	events: {
+    'click .user-card' : 'showUser'
+  },
 	
 	render: function(){
 		this.$el.html(this.template());
@@ -27,6 +31,14 @@ app.views.HomeView = Backbone.View.extend({
     });
 
 		return this;
-	}
+	},
+
+	  showUser: function() {
+    event.preventDefault();
+    var id = $(event.target).data("id");
+    // console.log('fff');
+    console.log(id);
+    new app.routers.Router().navigate('/users/' + id, {trigger: true});
+  }
 
 });
