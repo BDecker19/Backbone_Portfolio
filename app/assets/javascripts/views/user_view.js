@@ -1,7 +1,7 @@
 app.views.UserView = Backbone.View.extend({
 
 	tagName: 'div',
-	template: _.template($('#user-template').html()),
+	template: JST['templates/_user_card'],
 	id: 'bio',
 	render: function() {
 		//get the template html

@@ -7,9 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 5.times do |i|
-  User.create(first_name: "firstName ##{i}", 
-  						last_name: "lastName ##{i}",
-  						bio: "this is the bio of user ##{i}",
-  						mission: "this is the mission of user ##{i}",
+  User.create(first_name: "#{i}#{Faker::Name.first_name}", 
+  						last_name: "#{i}#{Faker::Name.last_name}",
+  						bio: "#{i}#{Faker::Lorem.words(100).join(" ")}",
+  						mission: "#{i}#{Faker::Lorem.words(20).join(" ")}",
   						image_url: "uploads/someone.jpg")
 end
+

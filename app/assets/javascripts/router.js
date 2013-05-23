@@ -15,12 +15,11 @@ app.routers.Router = Backbone.Router.extend({
 		var currentUser = new app.models.User({id: userId});
 		currentUser.fetch();
 
-		var userView = new app.views.UserView();
-		$('#content').html(homeView.render().el);
-
 		console.log("the user is here!!!!!");
-		console.log(user.toJSON());
+		console.log(currentUser);
 
+		var view = new app.views.UserProjectsView( { model: currentUser});
+		$('#content').html(view.render().el);
 	}
 
 });
